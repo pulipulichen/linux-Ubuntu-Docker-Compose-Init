@@ -1,7 +1,7 @@
 # linux-Ubuntu-Docker-Compose-Init
 
 ````
-apt upgete && apt install -y nano wget curl && curl -fsSL https://rb.gy/diyg14 -o docker-init.sh && bash docker-init.sh && rm -f docker-init.sh; reboot
+apt update && apt install -y nano wget curl && curl -fsSL https://rb.gy/diyg14 -o docker-init.sh && bash docker-init.sh && rm -f docker-init.sh; reboot
 ````
 
 
