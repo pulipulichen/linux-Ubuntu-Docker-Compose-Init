@@ -10,6 +10,10 @@ if ! command -v docker-compose &> /dev/null; then
   apt install -y docker-compose
 fi
 
+if ! command -v mail &> /dev/null; then
+  apt install -y mailutils
+fi
+
 if [[ ! -f Dockerfile ]]; then
   curl -fsSL https://pulipulichen.github.io/linux-Ubuntu-Docker-Compose-Init/assets/Dockerfile -o Dockerfile
 fi
@@ -21,6 +25,11 @@ fi
 if [[ ! -f startup.sh ]]; then
   curl -fsSL https://pulipulichen.github.io/linux-Ubuntu-Docker-Compose-Init/assets/startup.sh -o startup.sh
   chmod +x startup.sh
+fi
+
+if [[ ! -f startup.sh ]]; then
+  curl -fsSL https://pulipulichen.github.io/linux-Ubuntu-Docker-Compose-Init/assets/docker-container-stop.sh -o docker-container-stop.sh
+  chmod +x docker-container-stop.sh
 fi
 
 # =================================================================
