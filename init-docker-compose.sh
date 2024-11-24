@@ -27,9 +27,14 @@ if [[ ! -f startup.sh ]]; then
   chmod +x startup.sh
 fi
 
-if [[ ! -f startup.sh ]]; then
+if [[ ! -f docker-container-stop.sh ]]; then
   curl -fsSL https://pulipulichen.github.io/linux-Ubuntu-Docker-Compose-Init/assets/docker-container-stop.sh -o docker-container-stop.sh
   chmod +x docker-container-stop.sh
+fi
+
+if [[ ! -f docker-container-reset.sh ]]; then
+  curl -fsSL https://pulipulichen.github.io/linux-Ubuntu-Docker-Compose-Init/assets/docker-container-reset.sh -o docker-container-reset.sh
+  chmod +x docker-container-reset.sh
 fi
 
 # =================================================================
